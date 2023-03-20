@@ -1,0 +1,37 @@
+/**
+ * Material Symbols Font:
+ * docs - https://developers.google.com/fonts/docs/material_symbols 
+ * searech - https://fonts.google.com/icons?selected=Material+Symbols+Outlined
+ */
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
+
+/**
+ * Make the page fill the viewport, turn off scrolling,
+ * get rid of all extra space around the outside.
+ */
+ html, body {
+  /* Use the entire height of the window */
+  height: 100%;
+  /* Don't show anything below that (cut it off) */
+  overflow: hidden;
+  /* Get rid of the usual margin/padding */
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Create a grid with 2 columns that are full-height.
+ * First column is narrow, second expands to fill the viewport.
+ * Set a default font for the whole document.
+ */
+body {
+  /* Make the body into a grid */
+  display: grid;
+  /* Grid has 2 columns, one is fixed width (245px) other fills the space */
+  grid-template-columns: 245px 1fr;
+  /* Only 1 row, which fills the entire space */
+  grid-template-rows: 1fr;
+
+  /* Use a Sans-Serif system font-stack */
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell ,Noto Sans, sans-serif, Helvetica Neue, Arial, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}

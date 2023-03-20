@@ -1,0 +1,133 @@
+/**************************************************************************
+ * Right-hand Chat column
+ **************************************************************************/
+main {
+  /* All items on the right use the same font */
+  color: rgb(56, 65, 81);
+  /* We'll position the input element at the bottom relative to this element */
+  position: relative;
+}
+
+main h1 {
+  /* Center the title */
+  text-align: center;
+  /* Increase the font size */  
+  font-size: 2.5em;
+  /* Make the font thinner */
+  font-weight: 500;
+  /* Increase the whitespace above and below */
+  margin-top: 1.9em;
+  margin-bottom: 1.8em;
+}
+
+/************************************************************************
+ * Central columns on load
+ ***********************************************************************/
+#columns {
+  /* Lay out in 3 columns */
+  display: flex;
+  /* Center everything inside the columns */
+  justify-content: center;
+  /* Wrap the columns when we get small */
+  flex-wrap: wrap;
+}
+
+#columns section {
+  /* Center the icon + heading in each column */
+  text-align: center;
+  /* Add whitespace between columns */
+  margin: 0 8px;
+}
+
+#columns h2 {
+  font-size: 1.2em;
+  font-weight: 400;
+  margin-top: .4em;
+}
+
+#columns ul {
+  /* Force a fixed width */
+  width: 230px;
+  /* Clear the usual padding/margin of a ul */
+  margin: 0;
+  padding: 0;
+}
+
+#columns li {
+  /* Remove the usual li bullet */
+  list-style-type: none;
+  /* Change the default padding/margin for an li */
+  padding: 10px;
+  margin: 15px 0;
+  /* Add a light gray background, round the corners */
+  background-color: rgb(247, 247, 248);
+  border-radius: 5px;
+  /* Center the text and make the font a bit smaller */
+  text-align: center;
+  font-size: .9em;
+}
+
+/* Decrease the size of the icons */
+.icon-small {
+  font-size: 14px;
+}
+
+/**************************************************************************
+ * Prompt input area
+ *************************************************************************/
+#prompt {
+  /* We'll position this element relative to main, and stick it to the bottom */
+  position: absolute;
+  /* Pin it 5px from the left, bottom, and right */
+  bottom: 5px;
+  left: 5px;
+  right: 5px;
+  /* Have it sit on top of other content */
+  z-index: 50;
+  /* Make it have a solid background colour so nothing shows through */
+  background-color: white;
+}
+
+#prompt p {
+  /* Only use a portion of the available width */
+  width: 85%;
+  /* Center the text */
+  text-align: center;
+  font-size: .8em;
+  padding: 10px 50px;
+}
+
+#input-wrapper {
+  display: flex;
+  border: 1px solid rgb(229, 229, 229);
+  padding: 5px;
+  border-radius: 5px;
+  /* Add a blurred shadow behind the wrapper */
+  box-shadow: 0 0 10px 2px rgb(229, 229, 229);
+}
+
+#input-wrapper input {
+  /* Flex the elements inside (input box will take most of the space) */
+  flex: 1;
+  /* Disable the usual border and outline when editing */
+  border: 0;
+  outline: 0;
+
+  /* Adjust the sizing */
+  margin: 0;
+  padding: 10;
+  font-size: 1em;
+}
+
+#input-wrapper button {
+  /* Remove the usual border and background of a button */
+  border: 0;
+  background-color: inherit;
+  /* Clear the normal padding/margin */
+  padding: 0;
+  margin: 0;
+  /* Change the font colour for the icon */
+  color: rgb(142, 142, 160);
+  /* Rotate the icon so it's sits at an angle */
+  transform: rotate(-45deg);
+}

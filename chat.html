@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>ChatCSS</title>
+
+      <link rel="stylesheet" href="styles/common.css" type="text/css">
+      <link rel="stylesheet" href="styles/menu.css" type="text/css">
+      <link rel="stylesheet" href="styles/chat.css" type="text/css">
+      <link rel="stylesheet" href="styles/prompt-response.css" type="text/css">
+    </head>
+    <body>
+      <!-- Menu Column -->
+      <nav id="menu">
+        <!-- New Chat button -->
+        <button id="new-chat">
+          <i class="menu-icon material-symbols-outlined">add</i>
+          New chat
+        </button>
+
+        <!-- Old Chat History -->
+        <ul id="chat-history">
+          <li>
+            <button>
+              <i class="menu-icon material-symbols-outlined">chat_bubble</i>
+              <span>Describe the difference between</span>
+            </button>
+          </li>
+
+          <li>
+            <button>              
+              <i class="menu-icon material-symbols-outlined">chat_bubble</i>
+              <span>JavaScript function that can</span>
+            </button> 
+          </li>
+
+          <li>
+            <button>
+              <i class="menu-icon material-symbols-outlined">chat_bubble</i>
+              <span>Write a story about a man who</span>
+            </button>
+          </li>
+
+          <li>
+            <button>
+              <i class="menu-icon material-symbols-outlined">chat_bubble</i>
+              <span>CSS to center a div</span>
+            </button>
+          </li>
+        </ul>
+
+        <!-- Chat Options -->
+        <ul id="chat-options">
+          <li>
+            <button>
+              <i class="menu-icon material-symbols-outlined">delete</i>
+              <span>Clear conversations</span>
+            </button>
+          </li>
+
+          <li>
+            <button>
+              <i class="menu-icon material-symbols-outlined">person</i>
+              <span>Upgrade to Plus</span>
+              <span class="new-pill">NEW<span>
+            </button>
+          </li>
+
+          <li>
+            <button>
+              <i class="menu-icon material-symbols-outlined">dark_mode</i>
+              Dark mode
+            </button>
+          </li>
+
+          <li>
+            <button>
+              <i class="menu-icon material-symbols-outlined">open_in_new</i>
+              Updates & FAQ
+            </button>
+          </li>
+
+          <li>
+            <button>
+              <i class="menu-icon material-symbols-outlined">logout</i>
+              Log out
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Chat Column -->
+      <main>
+
+        <div class="chat-item-wrapper prompt">
+          <div class="chat-item">
+            <div class="avatar-user"><span>DH<span></div>
+            <div class="message">
+              <p>Describe the difference between addEventListener('click', ...) and .onclick</p>
+            </div>
+            <div class="chat-item-buttons"></div>
+          </div>
+        </div>
+
+        <div class="chat-item-wrapper response">
+          <div class="chat-item">
+            <div class="avatar-chatgpt"><img src="chatgpt-logo.svg" width=22 height=22></div>
+            <div class="message">
+              <p>`<strong>addEventListener('click', ...)</strong>` and `<strong>.onclick</strong>` are two different ways to add a click event handler to an HTML element.</p>
+              <p>The `<strong>.onclick</strong>` property is a DOM Level 0 property that sets a function to be called when the element is clicked. It can only be set to a single function and will overwrite any previously set click event handler.</p>
+              <p>The `<strong>addEventListener('click', ...)</strong>` method is a DOM Level 2 method that allows you to attach multiple event handlers to an element. It takes two arguments: the type of the event you want to listen for (in this case, 'click'), and the function to be called when the event is triggered. This method also allows you to remove the event listener later on if needed.</p>
+            </div>
+            <div class="chat-item-buttons">
+              <button><i class="material-symbols-outlined">thumb_up</i></button>
+              <button><i class="material-symbols-outlined">thumb_down</i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Prompt input area -->
+        <div id="prompt">
+          <div id="input-wrapper">
+            <input type="text" />
+            <button><i class="material-symbols-outlined">send</i></button>
+          </div>
+          <p><a href="">ChatGPT Mar 14 Version</a>. Free Research Preview. Our goal is to make AI systems more natural and safe to interact with. Your feedback will help us improve.</p>
+        </div>        
+      </main>
+    </body>
+</html>

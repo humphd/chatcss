@@ -1,0 +1,220 @@
+
+/**
+ * Make the page fill the viewport, turn off scrolling,
+ * get rid of all extra space around the outside.
+ */
+html, body {
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Create a grid with 2 columns that are full-height.
+ * First column is narrow, second expands to fill the viewport.
+ * Set a default font for the whole document.
+ */
+main {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 245px 1fr;
+  grid-template-rows: 1fr;
+
+  /* Use a Sans-Serif system font-stack */
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell ,Noto Sans, sans-serif, Helvetica Neue, Arial, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+/**************************************************************************
+ * Left-hand Menu column
+ **************************************************************************/
+section.menu {
+  background-color: rgb(32, 33, 35);
+  color: rgb(236, 236, 241);
+  font-size: .9em;
+
+  /* Align the items vertically */
+  display: flex;
+  flex-direction: column;
+}
+
+/**
+ * First row in menu: New chat button
+ */
+#new-chat {
+  border: 1px solid rgb(77, 77, 79);
+  border-radius: 5px;
+}
+
+/**
+ * Second row in menu: chat history.
+ * Flex this chat history part to fill the
+ * available space. The other 2 parts take only the
+ * space they need.
+ */
+#chat-history {
+  flex: 1;
+}
+
+/**
+ * Third row in menu: chat options
+ */
+#chat-options {
+  margin: 5px;
+  border-top: 1px solid rgb(77, 77, 79);
+}
+
+/**
+ * Make the '+' icon smaller, add space to the right
+ */
+section.menu .icon {
+  font-size: 18px;
+  margin-right: 12px;
+}
+
+section.menu .left-item {
+  /* Align the items in the center vertically */
+  display: flex;
+  align-items: center;
+
+  margin: 10px;
+  padding: 10px;
+
+  /* Don't wrap text and cut off any text that goes off the right side */
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/**
+ * NEW bubble: push to the right, smaller font
+ * different colours, rounded corners.
+ */
+.left-item .new {
+  font-weight: 500;
+  font-size: .82em;
+  margin-left: auto;
+  padding: 4px 5px;
+  border-radius: 5px;
+  color: rgb(32, 33, 35);
+  background-color: rgb(251, 230, 158);
+}
+
+
+/**************************************************************************
+ * Right-hand Chat column
+ **************************************************************************/
+section.chat {
+  /* All items on the right use the same font */
+  color: rgb(56, 65, 81);
+}
+
+/** 
+ * Each item on the right needs to fill the whole width
+ * and have borders on the top and bottom, as well as
+ * extra padding on the top
+ */
+section.chat .chat-item-wrapper {
+  width: 100%;
+  padding: 20px 0;
+  border-top: 1px solid rgb(229, 229, 229);
+  border-bottom: 1px solid rgb(229, 229, 229);
+}
+
+/** 
+ * A user prompt uses a white background
+ */
+section.chat .chat-item-wrapper.prompt {
+  background-color: white;
+}
+
+/** 
+ * A ChatGPT response is light gray
+ */
+section.chat .chat-item-wrapper.response {
+  background-color: rgb(247, 247, 248);
+}
+
+/**
+ * Both prompts and response have similar layout
+ */
+section.chat .chat-item {
+  display: flex;
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/** 
+ * First element in the flexed row: an avatar (either ChatGPT or user)
+ */
+section.chat .chat-item .avatar-chatgpt {
+  /* Center the child img element horizontally and vertically */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Fix the width and height, and give it a green background */
+  width: 28px;
+  height: 28px;
+  background-color: rgb(16, 163, 127);
+
+  /* Soften the corners slightly */
+  border-radius: 2px;
+}
+section.chat .chat-item .avatar-user {
+  /* Center the child img element horizontally and vertically */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Fix the width and height, and give it an orange background */
+  width: 28px;
+  height: 28px;
+  background-color: rgb(243, 157, 19);
+
+  /* Fix the size and colour of initials */
+  font-size: .8em;
+  color: white;
+
+  /* Soften the corners slightly */
+  border-radius: 2px;
+}
+
+/**
+ * Second element in the flexed row: the message itself
+ */
+section.chat .chat-item .message {
+  flex: 1;
+  padding: 0 20px;
+  line-height: 2;
+}
+/* Get rid of the extra margin on the top */
+section.chat .chat-item .message * {
+  margin-top: 0;
+}
+
+/**
+ * Third element in the flexed row: thumb icons or nothing
+ */
+section.chat .chat-item .chat-item-buttons {
+  color: rgb(172, 172, 190);
+  /* Make sure that we always use 52px at least */
+  min-width: 52px;
+}
+section.chat .chat-item .chat-item-buttons button {
+  border: 0;
+  padding: 2px;
+  border-radius: 5px;
+  color: rgb(172, 172, 190);
+  background-color: transparent;
+}
+section.chat .chat-item .chat-item-buttons button:hover {
+  border: 0;
+  color: rgb(56, 65, 81);
+  background-color: rgb(236, 236, 241);
+}
+section.chat .chat-item .chat-item-buttons button i {
+  font-size: 18px;
+  margin: 0 4px;
+}

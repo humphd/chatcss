@@ -1,0 +1,110 @@
+/** 
+ * Each item on the right needs to fill the whole width
+ * and have borders on the top and bottom, as well as
+ * extra padding on the top
+ */
+main .chat-item-wrapper {
+  width: 100%;
+  padding: 20px 0;
+  border-top: 1px solid rgb(229, 229, 229);
+  border-bottom: 1px solid rgb(229, 229, 229);
+}
+
+/** 
+ * A user prompt uses a white background
+ */
+main .chat-item-wrapper.prompt {
+  background-color: white;
+}
+
+/** 
+ * A ChatGPT response is light gray
+ */
+main .chat-item-wrapper.response {
+  background-color: rgb(247, 247, 248);
+}
+
+/**
+ * Both prompts and response have similar layout
+ */
+main .chat-item {
+  display: flex;
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/** 
+ * First element in the flexed row: an avatar (either ChatGPT or user)
+ */
+main .chat-item .avatar-chatgpt {
+  /* Center the child img element horizontally and vertically */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Fix the width and height, and give it a green background */
+  width: 28px;
+  height: 28px;
+  background-color: rgb(16, 163, 127);
+
+  /* Soften the corners slightly */
+  border-radius: 2px;
+}
+main .chat-item .avatar-user {
+  /* Center the child img element horizontally and vertically */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Fix the width and height, and give it an orange background */
+  width: 28px;
+  height: 28px;
+  background-color: rgb(243, 157, 19);
+
+  /* Fix the size and colour of initials */
+  font-size: .8em;
+  color: white;
+
+  /* Soften the corners slightly */
+  border-radius: 2px;
+}
+
+/**
+ * Second element in the flexed row: the message itself
+ */
+main .chat-item .message {
+  flex: 1;
+  padding: 0 20px;
+  line-height: 2;
+}
+/* Get rid of the extra margin on the top */
+main .chat-item .message * {
+  margin-top: 0;
+}
+
+/**
+ * Third element in the flexed row: thumb icons or nothing
+ */
+main .chat-item .chat-item-buttons {
+  color: rgb(172, 172, 190);
+  /* Make sure that we always use 52px at least */
+  min-width: 52px;
+}
+main .chat-item .chat-item-buttons button {
+  border: 0;
+  padding: 2px;
+  border-radius: 5px;
+  color: rgb(172, 172, 190);
+  background-color: transparent;
+}
+main .chat-item .chat-item-buttons button:hover {
+  border: 0;
+  color: rgb(56, 65, 81);
+  background-color: rgb(236, 236, 241);
+}
+main .chat-item .chat-item-buttons button i {
+  font-size: 18px;
+  margin: 0 4px;
+}

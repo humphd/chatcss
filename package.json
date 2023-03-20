@@ -1,0 +1,12 @@
+{
+  "name": "chatgpt",
+  "version": "1.0.0",
+  "description": "Rebuilding ChatGPT in CSS",
+  "scripts": {
+    "start": "parcel index.html chat.html"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  }
+}
