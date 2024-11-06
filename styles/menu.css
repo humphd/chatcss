@@ -1,0 +1,147 @@
+/**************************************************************************
+ * Default overrides and classes
+ *************************************************************************/
+
+/**
+ * Make the icons smaller, add space to the right
+ */
+ .menu-icon {
+  /* Reduce the size */
+  font-size: 18px;
+  
+  /* Whitespace on the right-hand side */
+
+}
+
+#menu ul {
+  /* Clear the normal padding/margin on the ul */
+
+}
+
+/**
+ * Every li that we use should nave no bullet and use
+ * our own margin and padding.
+ */
+#menu li {
+  /* Remove the usual li bullet: list-style-type: none */
+
+  /* Alter the spacing around and outside the li */
+  /* margin: 2px 5px; */
+  /* padding: 5px 3px; */
+}
+/* When we hover over the li, change the background colour */
+#menu li:hover {
+  background-color: rgb(52, 53, 65);
+
+  /* Round the corners slightly */
+}
+
+#menu button {
+  /* Get rid of a button's usual border and padding, add outside whitespace (10px) */
+
+  /* Fill the entire available width, but no wider than 225px */
+
+  /* Align the items in the center vertically (hint: flex with align-items: center for secondary axis) */
+
+  /* Use the same colours as the parent for text and backround */
+
+  /* Increase font-size slightly */
+
+  /* Change the cursor to a finger pointer (hint: cursor) */
+
+}
+
+
+/**************************************************************************
+ * Left-hand Menu column
+ **************************************************************************/
+ #menu {
+  /* Colours */
+  background-color: rgb(32, 33, 35);
+  color: rgb(236, 236, 241);
+
+  /* Reduce the text size a bit */
+
+  /* Layout the items vertically, stretching some */
+
+  /* Don't let anything in this element grow beyond the right edge */
+
+}
+
+/* Use a media query to hide the menu under 768px wide */
+@media only screen and (max-width: 768px) {
+  #menu {
+    /* Don't show the menu */
+
+  }
+}
+
+/**************************************************************************
+ * First row in menu: New chat button
+ **************************************************************************/
+#new-chat {
+  /* Exactly 225 px, no wider */
+
+  /* Add inner whitespace all around (12px), force it */
+
+  /* Override the border, use rgb(77, 77, 79) for the colour, force it */
+
+  /* Round the corners slightly */
+
+}
+/* When we hover over the li, change the background colour */
+#new-chat:hover {
+  /* Colour */
+  background-color: rgb(52, 53, 65);
+
+  /* Round the corners slightly */
+
+}
+
+/**************************************************************************
+ * Second row in menu: chat history.
+ * Flex this chat history part to fill the
+ * available space. The other 2 parts take only the
+ * space they need.
+ **************************************************************************/
+#chat-history {
+  /* Stretch this to fill available space */
+
+}
+#chat-history li button span {
+  /* Don't let this grow beyond 180px */
+
+  /* We want inline, but we need to set a width on it (inline block) */
+
+  /* Don't wrap text: white-space: nowrap */
+
+  /* Don't show anything beyond the edge, clip it: overflow: hidden */
+
+  /* Show ellipsis (...) at the end if there is more text: text-overflow: ellipsis */
+
+}
+
+/**************************************************************************
+ * Third row in menu: chat options
+ *************************************************************************/
+#chat-options {
+  /* Add a border above, color rgb(77, 77, 79) */
+
+  /* Add a small amount of whitespace around the outside, so the border doesn't go all the way across */
+
+}
+
+/**
+ * NEW pill: push to the right, smaller font
+ * different colours, rounded corners.
+ */
+.new-pill {
+  font-weight: 500;
+  font-size: .82em;
+  margin-left: auto;
+  margin-right: 15px;
+  padding: 4px 5px;
+  border-radius: 5px;
+  color: rgb(32, 33, 35);
+  background-color: rgb(251, 230, 158);
+}

@@ -1,0 +1,133 @@
+/**************************************************************************
+ * Right-hand Chat column
+ **************************************************************************/
+ main {
+  /* All items on the right use the same font colour */
+  color: rgb(56, 65, 81);
+
+  /* We'll position the input element at the bottom relative to this element (position: relative) */
+
+}
+
+main h1 {
+  /* Center the title */
+
+  /* Increase the font size 250% */  
+
+  /* Make the font thinner */
+
+  /* Increase the whitespace above and below (~190%) */
+
+}
+
+/************************************************************************
+ * Central columns on load
+ ***********************************************************************/
+#columns {
+  /* Flexbox with 3 children */
+
+  /* Center everything inside the columns (justify-content on main axis) */
+
+  /* Wrap the columns when we get small (flex-wrap: wrap) */
+
+}
+
+#columns section {
+  /* Center the text (icon + heading) inside each column */
+
+  /* Add outside whitespace between columns (nothing in the Y-axis, ~8px in the X) */
+
+}
+
+#columns h2 {
+  /* Text size 120% */
+
+  /* Thinner font */
+
+  /* A bit of outside margin on the top (40%) */
+
+}
+
+#columns ul {
+  /* Force a fixed width of 230px */
+
+  /* Clear the usual padding/margin of a ul */
+
+}
+
+#columns li {
+  /* Remove the usual li bullet (list-style-type) */
+
+  /* Change the default padding/margin for an li (padding 10, margin Y=15px, X=0) */
+
+  /* Add a light gray background, round the corners */
+  background-color: rgb(247, 247, 248);
+
+  /* Center the text and make the font a bit smaller */
+
+}
+
+/* Decrease the size of the icons (14px?) */
+.icon-small {
+
+}
+
+/**************************************************************************
+ * Prompt input area
+ *************************************************************************/
+#prompt {
+  /* We'll position this element relative to main, and stick it to the bottom (position: absolute based on the relative element) */
+
+  /* Pin it 5px from the left, bottom, and right */
+
+  /* Have it sit on top of other content in the z-plane */
+
+  /* Make it have a solid background colour so nothing shows through */
+
+}
+
+#prompt p {
+  /* Only use a portion of the available width */
+
+  /* Center the text */
+
+  /* Reduce the font size a bit */
+
+  /* More whitespace outside the text */
+
+}
+
+#input-wrapper {
+  /* Flexbox */
+
+  border: 1px solid rgb(229, 229, 229);
+
+  /* More inner whitespace */
+
+  /* Rounded corners */
+
+  /* Add a blurred shadow behind the wrapper: box-shadow: 0 0 10px 2px rgb(229, 229, 229); */
+
+}
+
+#input-wrapper input {
+  /* Input box should take most of the space available space with flexbox */
+  flex: 1;
+
+  /* Disable the usual border and outline when editing */
+
+  /* Adjust the sizing (no margin, padding, 100% font size) */
+
+}
+
+#input-wrapper button {
+  /* Remove the usual border and background of a button (get from parent) */
+
+  /* Clear the normal padding/margin */
+
+  /* Change the font colour for the icon */
+  color: rgb(142, 142, 160);
+
+  /* Rotate the icon so it's sits at an angle */
+  /* transform: rotate(-45deg); */
+}
